@@ -1,0 +1,5 @@
+{
+  "eslint.validate": [
+    "html", // Add "html" to enable linting `.html` files.
+  ],
+}
