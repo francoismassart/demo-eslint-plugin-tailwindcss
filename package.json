@@ -1,0 +1,24 @@
+{
+  "name": "demo-eslint-plugin-tailwindcss",
+  "version": "1.0.0",
+  "description": "Demonstrating how `eslint-plugin-tailwindcss` works for you",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "eslint-plugin-tailwindcss": "^1.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francoismassart/demo-eslint-plugin-tailwindcss.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/francoismassart/demo-eslint-plugin-tailwindcss/issues"
+  },
+  "homepage": "https://github.com/francoismassart/demo-eslint-plugin-tailwindcss#readme"
+}
