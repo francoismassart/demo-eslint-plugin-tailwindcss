@@ -6,7 +6,7 @@
   "dependencies": {},
   "devDependencies": {
     "eslint": "^7.23.0",
-    "eslint-plugin-tailwindcss": "^3.3.6"
+    "eslint-plugin-tailwindcss": "^3.4.4"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
