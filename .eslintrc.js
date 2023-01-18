@@ -8,7 +8,6 @@ module.exports = {
     }
   },
   "plugins": [
-    "@html-eslint",
     "tailwindcss",
   ],
   "rules": {
@@ -18,9 +17,8 @@ module.exports = {
   },
   "overrides": [
     {
-      files: ["*.html"],
-      parser: "@html-eslint/parser",
-      extends: ["plugin:@html-eslint/recommended"],
+      "files": ["*.html"],
+      "parser": "@angular-eslint/template-parser",
       "rules": {
         "tailwindcss/classnames-order": 2,
         "tailwindcss/no-custom-classname": 2,
