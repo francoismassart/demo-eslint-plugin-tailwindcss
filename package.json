@@ -26,8 +26,10 @@
   },
   "homepage": "https://github.com/francoismassart/demo-eslint-plugin-tailwindcss#readme",
   "devDependencies": {
-    "@angular-eslint/template-parser": "^15.2.0",
     "eslint": "^7.23.0",
-    "eslint-plugin-tailwindcss": "^3.8.0"
+    "eslint-plugin-tailwindcss": "^3.8.1-beta.2"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
   }
 }
