@@ -27,7 +27,8 @@
   "homepage": "https://github.com/francoismassart/demo-eslint-plugin-tailwindcss#readme",
   "devDependencies": {
     "eslint": "^7.23.0",
-    "eslint-plugin-tailwindcss": "^3.8.1-beta.2"
+    "eslint-plugin-tailwindcss": "^3.8.1-beta.3",
+    "tailwindcss": "^3.2.4"
   },
   "dependencies": {
     "react": "^18.2.0"
