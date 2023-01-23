@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Simple dummy project using `eslint` + `eslint-plugin-tailwindcss` for demonstration purposes",
   "scripts": {
-    "lint": "eslint src",
-    "lint:debug": "eslint --debug src",
-    "lint:fix": "eslint --fix src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,8 +23,6 @@
   },
   "homepage": "https://github.com/francoismassart/demo-eslint-plugin-tailwindcss#readme",
   "devDependencies": {
-    "eslint": "^7.23.0",
-    "eslint-plugin-tailwindcss": "^3.8.1-beta.3",
     "tailwindcss": "^3.2.4"
   },
   "dependencies": {

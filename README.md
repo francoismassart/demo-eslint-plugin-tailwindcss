@@ -1,14 +1,9 @@
 # demo-eslint-plugin-tailwindcss
 
-Demonstrating how `eslint-plugin-tailwindcss` can wortk with HTML files.
+Demonstrating how `eslint-plugin-tailwindcss` can help you.
 
-The trick is to user the `@angular-eslint/template-parser` which won't trip on the doctype declaration.
+## Getting started
 
-Make sure to look at [.eslintrc.js](./.eslintrc.js)...
+You can follow along this project and jump to any step by changing branche on this repository.
 
-## Demo
-
-1. Clone this repo and check out this branch (`html-files`)
-2. `npm i` inside the cloned repo's folder
-3. `npm run lint` will just list the errors (based on the default config of Tailwind CSS)
-4. `npm run lint:fix` will autofix what is fixable and list remaining errors
+1. `getting-started/01-dummy-tailwindcss-project`
