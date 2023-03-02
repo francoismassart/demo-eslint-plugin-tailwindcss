@@ -1,0 +1,65 @@
+{% extends "_base/layout" %}
+
+{% set media = entry.media.with([['media:image', { withTransforms: ['media'] }]]).all() %}
+
+{% block content %}
+  <section class="relative pt-100">
+    <div class="absolute inset-0 bg-gradient-to-b from-gray-100 via-gray-100 to-white">
+      <div class="custom absolute w-full h-full opacity-40 bg-cover bg-center" style="background-image: url('/dist/assets/img/pattern.svg')"></div>
+    </div>
+  </section>
+
+  <section class="mb-150">
+    <div class="relative w-5/6 mx-auto">
+      <div class="flex flex-wrap">
+        {% block sidebar %}
+        {% endblock %}
+        <div class="w-full lg:w-2/3 xl:w-3/4 max-w-5xl pt-50 pt-0" data-aos="fade-up" data-aos-delay="150">
+          <h1 class="font-heading font-bold leading-none uppercase text-2xl md:text-3xl lg:text-4xl xl:text-5xl" data-aos="fade-up">
+            {{ entry.title }}
+          </h1>
+
+          <div class="wysiwyg mt-25">
+            {{ entry.text|raw }}
+          </div>
+
+          {% if media|length %}
+            <div data-controller="gallery">
+              {% for item in media %}
+                {% set image = item.image[0] ?? null %}
+                {% set url = item.video ?? image.url %}
+                <a
+                  href="{{ url }}"
+                  {% if item.video %}
+                    data-src="https://www.youtube-nocookie.com/embed/{{ url|youtubeCode }}"
+                  {% else %}
+                    data-src="{{ url }}"
+                  {% endif %}
+                  class="relative bg-white block pt-9/16 overflow-hidden group mt-50"
+                  data-aos="fade-up"
+                >
+                  {% if item.video %}
+                    <div class="absolute z-20 bottom-0 left-0 flex items-center pointer-events-none p-30 font-heading text-sm uppercase text-white">
+                      Bekijk video
+                      {{ svg('@webroot/dist/assets/img/arrow.svg')|attr({ class: 'text-gray-200 transition ml-10 group-hover:translate-x-10' }) }}
+                    </div>
+                    <div class="absolute z-10 inset-0 bg-gradient-to-b from-transparent to-black opacity-50 pointer-events-none"></div>
+                  {% endif %}
+                  {% if image %}
+                    <img
+                      src="{{ image.getUrl('media') }}"
+                      class="absolute inset-0 h-full w-full object-cover hover:scale-110 transition duration-500"
+                      alt="">
+                  {% endif %}
+                </a>
+              {% endfor %}
+            </div>
+          {% endif %}
+
+          {% block extra %}
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        yolo: '#B4D455'
+        one: '#B4D455'
       }
     },
   },
